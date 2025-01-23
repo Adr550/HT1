@@ -1,11 +1,11 @@
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-class LavadoraTest {
+class LicuadoraTest {
 
     @Test
     void testEncender() {
-        Lavadora lavadora = new Lavadora();
+        Licuadora lavadora = new Licuadora();
         
         lavadora.encender(); 
         assertTrue(lavadora.estado, "La licuadora debería estar encendida después de llamar a encender");
@@ -13,7 +13,7 @@ class LavadoraTest {
 
     @Test
     void testVaciar() {
-        Lavadora lavadora = new Lavadora();
+        Licuadora lavadora = new Licuadora();
 
         
         lavadora.llenar();
