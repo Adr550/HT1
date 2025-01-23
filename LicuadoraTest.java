@@ -22,6 +22,20 @@ class LicuadoraTest {
         
         lavadora.vaciar();
         assertFalse(lavadora.llenado, "La licuadora debería estar vacía después de llamar a vaciar");
-}
+    }
+
+    @Test
+    void testAumentarVelocidad() {
+        Licuadora licuadora = new Licuadora();
+        
+        licuadora.encender();
+        licuadora.llenar();
+        licuadora.aumentarVelocidad();
+
+        assertEquals(1, licuadora.consultarVelocidad(), "La velocidad deberia ser 1 depues de subirla por primera vez");
+
+
+
+    }
 }
 
