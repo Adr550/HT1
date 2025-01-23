@@ -6,9 +6,7 @@ public class Licuadora {
     public void encender() {
         if (estado == false) {
             estado = true;
-            System.out.println("La licuadora esta encendida");
-        } else {
-            System.out.println("La licuadora ya estaba encendida");
+           
         }
 
     }
