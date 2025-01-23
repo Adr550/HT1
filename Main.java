@@ -6,7 +6,7 @@ public class Main {
         boolean i = true;
 
             Scanner input = new Scanner(System.in);
-            Lavadora lavadora = new Lavadora();
+            Licuadora licuadora = new Licuadora();
 
 
             do {
@@ -24,29 +24,32 @@ public class Main {
                 String opcion = input.nextLine();
 
                 if (opcion.equals("1")) {
-                    lavadora.encender();
+                    licuadora.encender();
                 }if (opcion.equals("2")) {
-                    lavadora.aumentarVelocidad();
+                    licuadora.aumentarVelocidad();
 
                 }if(opcion.equals("3")) {
-                    lavadora.consultarVelocidad();
-                    System.out.println("La velocidad actual es" +" "+ lavadora.consultarVelocidad());
+                    licuadora.consultarVelocidad();
+                    System.out.println("La velocidad actual es" +" "+ licuadora.consultarVelocidad());
 
 
                 }
                 if (opcion.equals("4")) {
-                    lavadora.llenar();
+                    licuadora.llenar();
 
                 }if (opcion.equals("5")) {
-                    lavadora.vaciar();
+                    licuadora.vaciar();
                 }
                 if (opcion.equals("6")) {
-                    lavadora.consultarLlenado();
+                    licuadora.consultarLlenado();
                 }
                 if (opcion.equals("7")) {
                    i=false;
                 }
             }while(i == true);
+
+            input.close();
+
 
 
 
