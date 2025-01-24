@@ -1,3 +1,7 @@
+/**
+ * Clase principal que contiene el método main para interactuar con la 
+ * clase Licuadora a través de un menú en consola.
+ */
 import java.util.Scanner;
 
 public class Main {
@@ -7,7 +11,7 @@ public class Main {
         Scanner input = new Scanner(System.in);
         Licuadora licuadora = new Licuadora();
 
-        do { //se añade case break en lugar ifs y se mantiene el do while 
+        do { 
             System.out.println("Elige las siguientes opciones:");
             System.out.println("1. Encender");
             System.out.println("2. Aumentar velocidad");
@@ -18,7 +22,7 @@ public class Main {
             System.out.println("7. Apagar licuadora");
             System.out.println();
 
-            String opcion = input.nextLine(); //se crea objeto de input para el usuario
+            String opcion = input.nextLine(); 
 
             switch (opcion) { 
                 case "1":
@@ -26,22 +30,22 @@ public class Main {
                         licuadora.encender();
                         System.out.println("Licuadora encendida.");
                     } else {
-                        System.out.println("La licuadora ya estaba encendida."); //este else está por si la licuadora ya había hecho dicha acción 
+                        System.out.println("La licuadora ya estaba encendida."); 
                     }
                     break;
                 case "2":
                     if (licuadora.estado && licuadora.llenado) {
                         licuadora.aumentarVelocidad();
                         System.out.println("Velocidad aumentada");
-                        } else {
-                            System.out.println("La licuadora tiene que estar encendida y llena.");  // se debe cumplir que la licuadora esté llena y encendida
+                    } else {
+                        System.out.println("La licuadora tiene que estar encendida y llena.");  
                     }
                     break;
                 case "3":
                     System.out.println("La velocidad actual es " + licuadora.consultarVelocidad()); 
                     break;
                 case "4":
-                    if (!licuadora.llenado) { //condición si el valor de llenado es falso
+                    if (!licuadora.llenado) { 
                         licuadora.llenar();
                         System.out.println("Licuadora llenada.");
                     } else {
@@ -53,14 +57,14 @@ public class Main {
                         licuadora.vaciar();
                         System.out.println("Licuadora vaciada.");
                     } else {
-                        System.out.println("La licuadora ya estaba vacia.");
+                        System.out.println("La licuadora ya estaba vacía.");
                     }
                     break;
                 case "6":
                     if (licuadora.consultarLlenado()) {
-                        System.out.println("La licuadora esta llena.");
+                        System.out.println("La licuadora está llena.");
                     } else {
-                        System.out.println("La licuadora está vacia.");
+                        System.out.println("La licuadora está vacía.");
                     }
                     break;
                 case "7":
@@ -68,8 +72,8 @@ public class Main {
                     System.out.println("Apagando licuadora ");
                     break;
                 default:
-                    System.out.println("Opcion invalida ");
-                    break; //la última opción hace que la variable x sea falsa y termina el progama
+                    System.out.println("Opción inválida ");
+                    break; 
             }
         } while (x);
 
